@@ -84,42 +84,42 @@ public int countMines(int row, int col)
 {
     int numMines = 0;
     //your code here
-    if (isValid(row,col)){
+   if (isValid(row-1,col-1)){
       if (mines.contains(buttons[row-1][col-1])){
         numMines++; // neighbor >> top left
       }
     }
-    if (isValid(row,col)){
+    if (isValid(row-1,col)){
       if (mines.contains(buttons[row-1][col])){
         numMines++; // neighbor >> top mid
       }
     }
-    if (isValid(row,col)){
+    if (isValid(row-1,col+1)){
       if (mines.contains(buttons[row-1][col+1])){
         numMines++; // neighbor >> top right
       }
     }
-    if (isValid(row,col)){
+    if (isValid(row,col-1)){
       if (mines.contains(buttons[row][col-1])){
         numMines++; // neighbor >> mid left
       }
     }
-    if (isValid(row,col)){
+    if (isValid(row,col+1)){
       if (mines.contains(buttons[row][col+1])){
         numMines++; // neighbor >> mid right
       }
     }
-    if (isValid(row,col)){
+    if (isValid(row+1,col-1)){
       if (mines.contains(buttons[row+1][col-1])){
         numMines++; // neighbor >> bottom left
       }
     }
-    if (isValid(row,col)){
+    if (isValid(row+1,col)){
       if (mines.contains(buttons[row+1][col])){
         numMines++; // neighbor >> bottom mid
       }
     }
-    if (isValid(row,col)){
+    if (isValid(row+1,col+1)){
       if (mines.contains(buttons[row+1][col+1])){
         numMines++; // neighbor >> bottom right
       }
